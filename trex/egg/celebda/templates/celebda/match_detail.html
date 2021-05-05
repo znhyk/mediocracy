@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- this site is created with : http://www.iueditor.org -->
+<HTML>
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/iu.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/header.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/footer.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/pages/page5.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js"></script>
+		<script type="text/javascript" src="{% static '/resources/js/iuevent.js' %}"></script>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement("header")
+				document.createElement("footer")
+				document.createElement("section")
+				document.createElement("nav")
+				document.createElement("article")
+			</script>
+			<noscript>
+				<strong>Warning !</strong>
+				Because your browser does not support HTML5, some elements are simulated using JScript.
+				Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+			</noscript>
+		<![endif]-->
+	</head>
+	<body>
+	<div class="iu-page iu-page-159">
+		<div class="iu-header iu-header-160 iu-composition-12">
+			<a href="{% url 'celebda:welcome_index' account_id=account_now.id %}"><div class="iu-floating-image iu-floating-image-12"></div></a>
+			<div class="iu-floating-image iu-floating-image-13"></div>
+			<a href="{% url 'celebda:index' %}"><div class="iu-floating-image iu-floating-image-14"></div></a>
+			<div class="iu-floating-image iu-floating-image-15"></div>
+			<a href="{% url 'celebda:wish_matchcondition' account_id=account_now.id %}"><div class="iu-floating-image iu-floating-image-16"></div></a>
+			<div class="iu-icon-button iu-icon-button-20">
+				<p>
+					<span>
+					<a href="{% url 'celebda:my_profile' account_id=account_now.id %}">{{account_now.user_nick}}</a>
+					</span>
+					<img src="{% static '/resources/images/user_icn0.jpg' %}"/>
+				</p>
+			</div>
+		</div>
+		<div class="iu-page-content iu-page-content-161">
+			<section class="iu-section iu-section-162">
+				<div class="iu-box iu-box-186">
+					<div class="iu-text iu-text-79">
+						<p>MATCH CONDITION DETAIL</p>
+					</div>
+					<div class="iu-text iu-text-36">
+						<p>{{account_now.user_nick}}님의&nbsp; {{matchcondition.id}}번 조건은 다음과 같습니다.</p>
+					</div>
+					<div class="iu-text iu-text-187">
+						<p>성별:{{matchcondition.sex}}</p>
+					</div>
+					<div class="iu-text iu-text-188">
+						<p>연령:{{matchcondition.age}}</p>
+					</div>
+					<div class="iu-text iu-text-185">
+						<p>활동분야:{{matchcondition.field}}</p>
+					</div>
+					<div class="iu-text iu-text-184">
+						<p>예상가격:{{matchcondition.cost}}</p>
+					</div>
+				</div>
+				<div class="iu-box iu-box-35">
+					<div class="iu-text iu-text-194">
+						<p>PARTNERS</p>
+					</div>
+					<div class="iu-text iu-text-195">
+						<p>나와 같은 조건을 선택한 파트너:</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-41">
+						<p>
+							{% if partner_1.account.thum %}
+									<img src="{{ partner_1.account.thum.url }}"/>
+							{% endif %}
+							<span>
+							{% if partner_1 != None %}
+								<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=partner_1.id %}">{{partner_1.id_name}}</a>
+							{% else %}
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-42">
+						<p>
+							{% if partner_2.account.thum %}
+								<img src="{{ partner_2.account.thum.url }}"/>
+							{% endif %}
+							<span>
+							{% if partner_2 != None %}
+								<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=partner_2.id %}">{{partner_2.id_name}}</a>
+							{% else %}
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-43">
+						<p>
+							{% if partner_3.account.thum %}
+								<img src="{{ partner_3.account.thum.url }}"/>
+							{% endif %}
+							<span>
+							{% if partner_3 != None %}
+								<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=partner_3.id %}">{{partner_3.id_name}}</a>
+							{% else %}
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-44">
+						<p>
+							{% if partner_4.account.thum %}
+								<img src="{{ partner_4.account.thum.url }}"/>
+							{% endif %}
+							<span>
+							{% if partner_4 != None %}
+								<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=partner_4.id %}">{{partner_4.id_name}}</a>
+							{% else %}
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-196">
+						<p>
+							{% if partner_5.account.thum %}
+									<img src="{{ partner_5.account.thum.url }}"/>
+							{% endif %}
+							<span>
+							{% if partner_5 != None %}
+								<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=partner_5.id %}">{{partner_5.id_name}}</a>
+							{% else %}
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-197">
+						<p>
+							{% if partner_6.account.thum %}
+									<img src="{{ partner_6.account.thum.url }}"/>
+							{% endif %}
+							<span>
+							{% if partner_6 != None %}
+								<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=partner_6.id %}">{{partner_6.id_name}}</a>
+							{% else %}
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-text iu-text-198">
+						<p>좋아요 기준 정렬</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="iu-footer iu-footer-165 iu-composition-11">
+			<div class="iu-floating-image iu-floating-image-17"></div>
+			<div class="iu-text iu-text-23">
+				<p>Company:20Trendy.Inc., Owner:송민준</p>
+				<p>통신사업자:2021서울동대문523호</p>
+				<p>개인정보관리자:최준혁,znhyk@gmail.com</p>
+				<p>주소:서울특별시 동대문구 이문로 64-11</p>
+				<p>20Trendy@ALL Rights reserved. designed by znhyk.</p>
+			</div>
+		</div>
+	</div>
+	<div id="iux-popup-dimcolor" class="iux-popup-dimcolor"></div>
+	<div id="iux-panel-dimcolor" class="iux-panel-dimcolor"></div>
+	</body>
+</HTML>

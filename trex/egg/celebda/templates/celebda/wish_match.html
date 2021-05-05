@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- this site is created with : http://www.iueditor.org -->
+<HTML>
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/iu.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/header.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/footer.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/pages/page2.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js"></script>
+		<script type="text/javascript" src="{% static '/resources/js/iuevent.js' %}"></script>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement("header")
+				document.createElement("footer")
+				document.createElement("section")
+				document.createElement("nav")
+				document.createElement("article")
+			</script>
+			<noscript>
+				<strong>Warning !</strong>
+				Because your browser does not support HTML5, some elements are simulated using JScript.
+				Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+			</noscript>
+		<![endif]-->
+	</head>
+	<body>
+	<div class="iu-page iu-page-73">
+		<div class="iu-header iu-header-74 iu-composition-12">
+			<a href="{% url 'celebda:welcome_index' account_id=account_now.id %}"><div class="iu-floating-image iu-floating-image-12"></div></a>
+			<div class="iu-floating-image iu-floating-image-13"></div>
+			<a href="{% url 'celebda:index' %}"><div class="iu-floating-image iu-floating-image-14"></div></a>
+			<div class="iu-floating-image iu-floating-image-15"></div>
+			<a href="{% url 'celebda:wish_matchcondition' account_id=account_now.id %}"><div class="iu-floating-image iu-floating-image-16"></div></a>
+			<div class="iu-icon-button iu-icon-button-20">
+				<p>
+					<span>
+					<a href="{% url 'celebda:my_profile' account_id=account_now.id %}">{{account_now.user_nick}}</a>
+					</span>
+					<img src="{% static 'resources/images/user_icn0.jpg' %}"/>
+				</p>
+			</div>
+		</div>
+		<div class="iu-page-content iu-page-content-75">
+			<section class="iu-section iu-section-76">
+				<div class="iu-box iu-box-29">
+					<div class="iu-box iu-box-34">
+						<div class="iu-icon-button iu-icon-button-38">
+							<p>
+								{% if freshman_1.thum %}
+									<img src="{{ freshman_1.thum.url }}"/>
+								{% endif %}
+								<span>
+								{% if freshman_1 != None %}								
+									<a href="{% url 'celebda:peek_direct' account_id=account_now.id direct_id=freshman_1.id %}">{{freshman_1.user_nick}}</a>
+								{% else %}
+								{% endif %}
+								</span>
+							</p>
+						</div>
+						<div class="iu-icon-button iu-icon-button-39">
+							<p>
+								{% if freshman_2.thum %}
+									<img src="{{ freshman_2.thum.url }}"/>
+								{% endif %}
+								<span>
+								{% if freshman_2 != None %}								
+									<a href="{% url 'celebda:peek_direct' account_id=account_now.id direct_id=freshman_2.id %}">{{freshman_2.user_nick}}</a>
+								{% else %}
+								{% endif %}
+								</span>
+							</p>
+						</div>
+						<div class="iu-icon-button iu-icon-button-40">
+							<p>
+								{% if freshman_3.thum %}
+									<img src="{{ freshman_3.thum.url }}"/>
+								{% endif %}
+								<span>
+								{% if freshman_3 != None %}								
+									<a href="{% url 'celebda:peek_direct' account_id=account_now.id direct_id=freshman_3.id %}">{{freshman_3.user_nick}}</a>
+								{% else %}
+								{% endif %}
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="iu-box iu-box-35">
+						<div class="iu-icon-button iu-icon-button-41">
+							<p>
+								<img/>
+								<span>
+								{% if likedone_1 != None %}
+									<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=likedone_1.id %}"> {{likedone_1.id_name}}</a>
+								{% else %}
+								{% endif %}
+								</span>
+							</p>
+						</div>
+						<div class="iu-icon-button iu-icon-button-42">
+							<p>
+								<img/>
+								<span>
+								{% if likedone_2 != None %}
+									<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=likedone_2.id %}"> {{likedone_2.id_name}}</a>
+								{% else %}
+								{% endif %}
+								</span>
+							</p>
+						</div>
+						<div class="iu-icon-button iu-icon-button-43">
+							<p>
+								<img/>
+								<span>
+								{% if likedone_3 != None %}
+									<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=likedone_3.id %}"> {{likedone_3.id_name}}</a>
+								{% else %}
+								{% endif %}
+								</span>
+							</p>
+						</div>
+						<div class="iu-icon-button iu-icon-button-44">
+							<p>
+								<img/>
+								<span>
+								{% if likedone_4 != None %}
+									<a href="{% url 'celebda:partner_detail' account_id=account_now.id tango_id=likedone_4.id %}"> {{likedone_4.id_name}}</a>
+								{% else %}
+								{% endif %}
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="iu-text iu-text-36">
+						<p>New Arrivals!;</p>
+						<p>새로운 비즈니스 파트너를 만나보세요.</p>
+					</div>
+					<div class="iu-text iu-text-37">
+						<p>내 관심 파트너;</p>
+						<p>놓치지 않게 주의!</p>
+					</div>
+					<div class="iu-text iu-text-44">
+						<p>[더보기]</p>
+					</div>
+				</div>
+				<div class="iu-box iu-box-74">
+					<div class="iu-text iu-text-79">
+						<p>MY WISH MATCH</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-168">
+						<p>
+							<img/>
+							<span>
+							{% if match_1 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_1.id %}">No.{{match_1.id}}/{{match_1.sex}}/{{match_1.age}}/{{match_1.cost}}/{{match_1.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-169">
+						<p>
+							<img/>
+							<span>
+							{% if match_2 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_2.id %}">No.{{match_2.id}}/{{match_2.sex}}/{{match_2.age}}/{{match_2.cost}}/{{match_2.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-170">
+						<p>
+							<img/>
+							<span>
+							{% if match_3 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_3.id %}">No.{{match_3.id}}/{{match_3.sex}}/{{match_3.age}}/{{match_3.cost}}/{{match_3.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-171">
+						<p>
+							<img/>
+							<span>
+							{% if match_4 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_4.id %}">No.{{match_4.id}}/{{match_4.sex}}/{{match_4.age}}/{{match_4.cost}}/{{match_4.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-172">
+						<p>
+							<img/>
+							<span>
+							{% if match_5 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_5.id %}">No.{{match_5.id}}/{{match_5.sex}}/{{match_5.age}}/{{match_5.cost}}/{{match_5.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-173">
+						<p>
+							<img/>
+							<span>
+							{% if match_6 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_6.id %}">No.{{match_6.id}}/{{match_6.sex}}/{{match_6.age}}/{{match_6.cost}}/{{match_6.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-174">
+						<p>
+							<img/>
+							<span>
+							{% if match_7 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_7.id %}">No.{{match_7.id}}/{{match_7.sex}}/{{match_7.age}}/{{match_7.cost}}/{{match_7.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+					<div class="iu-icon-button iu-icon-button-175">
+						<p>
+							<img/>
+							<span>
+							{% if match_8 != None %}
+								<a href="{% url 'celebda:matchcondition_detail' account_id=account_now.id matchcondition_id=match_8.id %}">No.{{match_8.id}}/{{match_8.sex}}/{{match_8.age}}/{{match_8.cost}}/{{match_8.field}}</a>
+							{% else %}
+								*
+							{% endif %}
+							</span>
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="iu-footer iu-footer-79 iu-composition-11">
+			<div class="iu-floating-image iu-floating-image-17"></div>
+			<div class="iu-text iu-text-23">
+				<p>Company:20Trendy.Inc., Owner:송민준</p>
+				<p>통신사업자:2021서울동대문523호</p>
+				<p>개인정보관리자:최준혁,znhyk@gmail.com</p>
+				<p>주소:서울특별시 동대문구 이문로 64-11</p>
+				<p>20Trendy@ALL Rights reserved. designed by znhyk.</p>
+			</div>
+		</div>
+	</div>
+	<div id="iux-popup-dimcolor" class="iux-popup-dimcolor"></div>
+	<div id="iux-panel-dimcolor" class="iux-panel-dimcolor"></div>
+	</body>
+</HTML>

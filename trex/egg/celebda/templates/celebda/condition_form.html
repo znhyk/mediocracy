@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- this site is created with : http://www.iueditor.org -->
+<HTML>
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/iu.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/header.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/footer.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/pages/page1.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js"></script>
+		<script type="text/javascript" src="{% static '/resources/js/iuevent.js' %}"></script>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement("header")
+				document.createElement("footer")
+				document.createElement("section")
+				document.createElement("nav")
+				document.createElement("article")
+			</script>
+			<noscript>
+				<strong>Warning !</strong>
+				Because your browser does not support HTML5, some elements are simulated using JScript.
+				Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+			</noscript>
+		<![endif]-->
+	</head>
+	<body>
+	<div class="iu-page iu-page-74">
+		<div class="iu-header iu-header-75 iu-composition-12">
+			<a href="{% url 'celebda:welcome_index' account_id=account_now.id %}"><div class="iu-floating-image iu-floating-image-12"></div></a>
+			<div class="iu-floating-image iu-floating-image-13"></div>
+			<div class="iu-floating-image iu-floating-image-14"></div>
+			<div class="iu-floating-image iu-floating-image-15"></div>
+			<div class="iu-floating-image iu-floating-image-16"></div>
+			<div class="iu-icon-button iu-icon-button-20">
+				<p>
+					<span>
+					{{account_now.user_nick}}
+					</span>
+					<img src="{% static '/resources/images/user_icn0.jpg' %}"/>
+				</p>
+			</div>
+		</div>
+		<div class="iu-page-content iu-page-content-76">
+			<section class="iu-section iu-section-77">
+				<div class="iu-box iu-box-80">
+					<form class="iu-pg-form iu-pg-form-81" action="{% url 'celebda:condition_form' account_id=account_now.id %}" enctype="true" method="post">
+						{% csrf_token %}
+						<div class="iu-text iu-text-37">
+							<p>성별;</p>
+						</div>
+						<div class="iu-cell iu-cell-54">
+							<p>#남성</p>
+						</div>
+						<input id="iu-pg-checkbox-99" class="iu-pg-checkbox iu-pg-checkbox-99" name="sex" type="checkbox" value="ML"/>
+						<div class="iu-cell iu-cell-104">
+							<p>#여성</p>
+						</div>
+						<input id="iu-pg-checkbox-105" class="iu-pg-checkbox iu-pg-checkbox-105" name="sex" type="checkbox" value="FM"/>
+						<div class="iu-cell iu-cell-106">
+							<p>#무관</p>
+						</div>
+						<input id="iu-pg-checkbox-107" class="iu-pg-checkbox iu-pg-checkbox-107" name="sex" type="checkbox" value="IR"/>
+						<div class="iu-text iu-text-84">
+							<p>연령대;</p>
+						</div>
+						<div class="iu-cell iu-cell-108">
+							<p>#10대</p>
+						</div>
+						<input id="iu-pg-checkbox-109" class="iu-pg-checkbox iu-pg-checkbox-109" name="age" type="checkbox" value="10S"/>
+						<div class="iu-cell iu-cell-110">
+							<p>#20대</p>
+						</div>
+						<input id="iu-pg-checkbox-111" class="iu-pg-checkbox iu-pg-checkbox-111" name="age" type="checkbox" value="20S"/>
+						<div class="iu-cell iu-cell-116">
+							<p>#30대</p>
+						</div>
+						<input id="iu-pg-checkbox-117" class="iu-pg-checkbox iu-pg-checkbox-117" name="age" type="checkbox" value="30S"/>
+						<div class="iu-cell iu-cell-118">
+							<p>#40대</p>
+						</div>
+						<input id="iu-pg-checkbox-119" class="iu-pg-checkbox iu-pg-checkbox-119" name="age" type="checkbox" value="40S"/>
+						<div class="iu-cell iu-cell-120">
+							<p>#50대</p>
+						</div>
+						<input id="iu-pg-checkbox-121" class="iu-pg-checkbox iu-pg-checkbox-121" name="age" type="checkbox" value="50S"/>
+						<div class="iu-cell iu-cell-122">
+							<p>#무관</p>
+						</div>
+						<input id="iu-pg-checkbox-123" class="iu-pg-checkbox iu-pg-checkbox-123" name="age" type="checkbox" value="IR"/>
+						<div class="iu-text iu-text-85">
+							<p>예상가격;</p>
+						</div>
+						<div class="iu-cell iu-cell-124">
+							<p>#백만</p>
+						</div>
+						<input id="iu-pg-checkbox-125" class="iu-pg-checkbox iu-pg-checkbox-125" name="cost" type="checkbox" value="1M"/>
+						<div class="iu-cell iu-cell-126">
+							<p>#천만</p>
+						</div>
+						<input id="iu-pg-checkbox-127" class="iu-pg-checkbox iu-pg-checkbox-127" name="cost" type="checkbox" value="10M"/>
+						<div class="iu-cell iu-cell-128">
+							<p>#억</p>
+						</div>
+						<input id="iu-pg-checkbox-129" class="iu-pg-checkbox iu-pg-checkbox-129" name="cost" type="checkbox" value="1B"/>
+						<div class="iu-cell iu-cell-130">
+							<p>#무관</p>
+						</div>
+						<input id="iu-pg-checkbox-131" class="iu-pg-checkbox iu-pg-checkbox-131" name="cost" type="checkbox" value="IR"/>
+						<div class="iu-text iu-text-86">
+							<p>활동분야;</p>
+						</div>
+						<div class="iu-cell iu-cell-134">
+							<p>#먹방</p>
+						</div>
+						<input id="iu-pg-checkbox-135" class="iu-pg-checkbox iu-pg-checkbox-135" name="field" type="checkbox" value="F&B"/>
+						<div class="iu-cell iu-cell-136">
+							<p>#레저</p>
+						</div>
+						<input id="iu-pg-checkbox-137" class="iu-pg-checkbox iu-pg-checkbox-137" name="field" type="checkbox" value="L&S"/>
+						<div class="iu-cell iu-cell-138">
+							<p>#뷰티</p>
+						</div>
+						<input id="iu-pg-checkbox-139" class="iu-pg-checkbox iu-pg-checkbox-139" name="field" type="checkbox" value="B&C"/>
+						<div class="iu-cell iu-cell-140">
+							<p>#무관</p>
+						</div>
+						<input id="iu-pg-checkbox-141" class="iu-pg-checkbox iu-pg-checkbox-141" name="field" type="checkbox" value="IR" />
+						<input class="iu-pg-button iu-pg-button-98" type="submit" value="OK"/>
+					</form>
+				</div>
+			</section>
+		</div>
+		<div class="iu-footer iu-footer-80 iu-composition-11">
+			<div class="iu-floating-image iu-floating-image-17"></div>
+			<div class="iu-text iu-text-23">
+				<p>Company:20Trendy.Inc., Owner:송민준</p>
+				<p>통신사업자:2021서울동대문523호</p>
+				<p>개인정보관리자:최준혁,znhyk@gmail.com</p>
+				<p>주소:서울특별시 동대문구 이문로 64-11</p>
+				<p>20Trendy@ALL Rights reserved. designed by znhyk.</p>
+			</div>
+		</div>
+	</div>
+	<div id="iux-popup-dimcolor" class="iux-popup-dimcolor"></div>
+	<div id="iux-panel-dimcolor" class="iux-panel-dimcolor"></div>
+	</body>
+</HTML>

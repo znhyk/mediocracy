@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- this site is created with : http://www.iueditor.org -->
+<HTML>
+	<head>
+	    {% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/iu.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/header.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/footer.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/pages/page1.css' %}">
+		<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js"></script>
+		<script type="text/javascript" src="{% static '/resources/js/iuevent.js' %}"></script>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement("header")
+				document.createElement("footer")
+				document.createElement("section")
+				document.createElement("nav")
+				document.createElement("article")
+			</script>
+			<noscript>
+				<strong>Warning !</strong>
+				Because your browser does not support HTML5, some elements are simulated using JScript.
+				Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+			</noscript>
+		<![endif]-->
+	</head>
+	<body>
+	<div class="iu-page iu-page-74">
+		<div class="iu-header iu-header-75 iu-composition-12">
+			<a href="{% url 'celebda:welcome_index' account_id=account_now.id %}"><div class="iu-floating-image iu-floating-image-12"></div></a>
+			<div class="iu-floating-image iu-floating-image-13"></div>
+			<div class="iu-floating-image iu-floating-image-14"></div>
+			<div class="iu-floating-image iu-floating-image-15"></div>
+			<div class="iu-floating-image iu-floating-image-16"></div>
+			<div class="iu-icon-button iu-icon-button-20">
+				<p>
+					<span>
+					{% block usercontent %}{% endblock %}
+					</span>
+					<img src="{% static '/resources/images/user_icn0.jpg' %}"/>
+				</p>
+			</div>
+		</div>
+		<div id="content">
+	        {% block content %}{% endblock %}
+	    </div>
+		<div class="iu-footer iu-footer-80 iu-composition-11">
+			<div class="iu-floating-image iu-floating-image-17"></div>
+			<div class="iu-text iu-text-23">
+				<p>Company:20Trendy.Inc., Owner:송민준</p>
+				<p>통신사업자:2021서울동대문523호</p>
+				<p>개인정보관리자:최준혁,znhyk@gmail.com</p>
+				<p>주소:서울특별시 동대문구 이문로 64-11</p>
+				<p>20Trendy@ALL Rights reserved. designed by znhyk.</p>
+			</div>
+		</div>
+	</div>
+	<div id="iux-popup-dimcolor" class="iux-popup-dimcolor"></div>
+	<div id="iux-panel-dimcolor" class="iux-panel-dimcolor"></div>
+	</body>
+</HTML>

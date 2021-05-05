@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- this site is created with : http://www.iueditor.org -->
+<HTML>
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/iu.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/header.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/footer.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/pages/page6.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js"></script>
+		<script type="text/javascript" src="{% static '/resources/js/iuevent.js' %}"></script>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement("header")
+				document.createElement("footer")
+				document.createElement("section")
+				document.createElement("nav")
+				document.createElement("article")
+			</script>
+			<noscript>
+				<strong>Warning !</strong>
+				Because your browser does not support HTML5, some elements are simulated using JScript.
+				Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+			</noscript>
+		<![endif]-->
+	</head>
+	<body>
+	<div class="iu-page iu-page-192">
+		<div class="iu-header iu-header-193 iu-composition-12">
+			<div class="iu-floating-image iu-floating-image-12"></div>
+			<div class="iu-floating-image iu-floating-image-13"></div>
+			<div class="iu-floating-image iu-floating-image-14"></div>
+			<div class="iu-floating-image iu-floating-image-15"></div>
+			<div class="iu-floating-image iu-floating-image-16"></div>
+			<div class="iu-icon-button iu-icon-button-20">
+				<p>
+					<span>
+					</span>
+					<img src="{% static '/resources/images/user_icn0.jpg' %}"/>
+				</p>
+			</div>
+		</div>
+		<div class="iu-page-content iu-page-content-194">
+			<section class="iu-section iu-section-195">
+				<div class="iu-box iu-box-201">
+					<div class="iu-text iu-text-37">
+						<p>거의 다왔습니다!</p>
+						<p>남들에게 보여질 별명과 자기소개를 입력해 주세요!</p>
+					</div>
+					<form class="iu-pg-form iu-pg-form-204" action="{% url 'celebda:profile_create' account_id=account_id %}" enctype="multipart/form-data" method="post">
+						{% csrf_token %}
+						<input class="iu-pg-text-field iu-pg-text-field-205" name="new_user_nick" type="text"/>
+						<div class="iu-text iu-text-138">
+							<p>별명:</p>
+						</div>
+						<input class="iu-pg-text-field iu-pg-text-field-207" name="new_phone_num" type="number"/>
+						<div class="iu-text iu-text-208">
+							<p>연락처(비공개):</p>
+						</div>
+						<textarea class="iu-pg-text-view iu-pg-text-view-275" name="new_introduce"></textarea>
+						<div class="iu-text iu-text-210">
+							<p>자기소개:</p>
+						</div>
+						<div class="iu-cell iu-cell-54">
+							<p>I</p>
+						</div>
+						<input id="iu-pg-checkbox-99" class="iu-pg-checkbox iu-pg-checkbox-99" name="iorp" type="checkbox" value="I"/>
+						<div class="iu-cell iu-cell-214">
+							<p>P</p>
+						</div>
+						<input id="iu-pg-checkbox-215" class="iu-pg-checkbox iu-pg-checkbox-215" name="iorp" type="checkbox" value="P"/>
+						<div class="iu-text iu-text-216">
+							<p>인플루언서신가요?</p>
+							<p>프로모터신가요?</p>
+						</div>
+						<div class="iu-text iu-text-221">
+							<p>프로필 이미지:</p>
+						</div>
+						<div class="iu-pg-file-upload iu-pg-file-upload-217">
+							<div class="iux-has-hover iu-pg-file-upload-button iu-pg-file-upload-button-218">
+								<p>업로드</p><input class="iux-pg-file-upload-innerbutton" type="file" name="photo"/>
+							</div>
+							<div class="iux-has-hover iu-pg-file-upload-file-name iu-pg-file-upload-file-name-219">
+								<p>File name</p>
+							</div>
+						</div>
+						<input class="iu-pg-button iu-pg-button-141" type="submit" value="GO!"/>
+					</form>
+				</div>
+			</section>
+		</div>
+		<div class="iu-footer iu-footer-198 iu-composition-11">
+			<div class="iu-floating-image iu-floating-image-17"></div>
+			<div class="iu-text iu-text-23">
+				<p>Company:20Trendy.Inc., Owner:송민준</p>
+				<p>통신사업자:2021서울동대문523호</p>
+				<p>개인정보관리자:최준혁,znhyk@gmail.com</p>
+				<p>주소:서울특별시 동대문구 이문로 64-11</p>
+				<p>20Trendy@ALL Rights reserved. designed by znhyk.</p>
+			</div>
+		</div>
+	</div>
+	<div id="iux-popup-dimcolor" class="iux-popup-dimcolor"></div>
+	<div id="iux-panel-dimcolor" class="iux-panel-dimcolor"></div>
+	</body>
+</HTML>

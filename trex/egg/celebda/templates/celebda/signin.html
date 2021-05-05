@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- this site is created with : http://www.iueditor.org -->
+<HTML>
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/iu.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/header.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/compositions/footer.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/resources/css/pages/page4.css' %}">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+		<script type="text/javascript" src="//cdn.iueditor.org/js/iueditor-2.1.js"></script>
+		<script type="text/javascript" src="{% static '/resources/js/iuevent.js' %}"></script>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement("header")
+				document.createElement("footer")
+				document.createElement("section")
+				document.createElement("nav")
+				document.createElement("article")
+			</script>
+			<noscript>
+				<strong>Warning !</strong>
+				Because your browser does not support HTML5, some elements are simulated using JScript.
+				Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+			</noscript>
+		<![endif]-->
+	</head>
+	<body>
+	<div class="iu-page iu-page-142">
+		<div class="iu-header iu-header-143 iu-composition-12">
+			<a href="{% url 'celebda:index' %}"><div class="iu-floating-image iu-floating-image-12"></div></a>
+			<div class="iu-floating-image iu-floating-image-13"></div>
+			<div class="iu-floating-image iu-floating-image-14"></div>
+			<a href="{% url 'celebda:signup' %}"><div class="iu-floating-image iu-floating-image-15"></div></a>
+			<div class="iu-floating-image iu-floating-image-16"></div>
+			<div class="iu-icon-button iu-icon-button-20">
+				<p>
+					<span>
+					[LOGIN PLEASE!] 
+					</span>
+					<img src="{% static '/resources/images/user_icn0.jpg' %}"/>
+				</p>
+			</div>
+		</div>
+		<div class="iu-page-content iu-page-content-144">
+			<section class="iu-section iu-section-145">
+				<div class="iu-box iu-box-130">
+					<div class="iu-floating-image iu-floating-image-132"></div>
+					<div class="iu-floating-image iu-floating-image-133"></div>
+					<form class="iu-pg-form iu-pg-form-131" enctype="true" method="post">
+						{% csrf_token %}
+						<div class="iu-text iu-text-134">
+							<p>로그인</p>
+							<p>Promoter | Influencer</p>
+						</div>
+						<div class="iu-text iu-text-138">
+							<p>ID를 입력해주세요.</p>
+						</div>
+						<div class="iu-text iu-text-139">
+							<p>PW를 입력해주세요.</p>
+						</div>
+						<input class="iu-pg-text-field iu-pg-text-field-135" name="sign_id" type="text"/>
+						<input class="iu-pg-text-field iu-pg-text-field-136" name="sign_password" type="password"/>
+						<input class="iu-pg-button iu-pg-button-141" type="submit" value="GO!"/>
+					</form>
+				</div>
+			</section>
+		</div>
+		<div class="iu-footer iu-footer-148 iu-composition-11">
+			<div class="iu-floating-image iu-floating-image-17"></div>
+			<div class="iu-text iu-text-23">
+				<p>Company:20Trendy.Inc., Owner:송민준</p>
+				<p>통신사업자:2021서울동대문523호</p>
+				<p>개인정보관리자:최준혁,znhyk@gmail.com</p>
+				<p>주소:서울특별시 동대문구 이문로 64-11</p>
+				<p>20Trendy@ALL Rights reserved. designed by znhyk.</p>
+			</div>
+		</div>
+	</div>
+	<div id="iux-popup-dimcolor" class="iux-popup-dimcolor"></div>
+	<div id="iux-panel-dimcolor" class="iux-panel-dimcolor"></div>
+	</body>
+</HTML>
